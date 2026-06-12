@@ -11,6 +11,14 @@ from fastapi import FastAPI
 # 1. CORS kütüphanesini içeri aktarıyoruz
 from fastapi.middleware.cors import CORSMiddleware
 
+
+
+app = FastAPI(
+    title="DAO Akıllı Sağlık Ajanı API Katmanı - V2",
+    description="Mobil uygulama için Hibrit LLM destekli ışık hızında sağlık servisi",
+    version="2.0.0"
+)
+
 app = FastAPI()
 
 # 2. Güvenlik duvarından geçebilecek adresleri (Localhost ve Render) tanımlıyoruz
@@ -42,12 +50,6 @@ def read_root():
         "koceMesaji": "Serdar Bey, harika bir gün! Adım hedefinize yaklaşırken Xiaomi tartı verileriniz kas kütlenizin korunduğunu gösteriyor. Yürüyüşe devam!"
     }
 
-
-app = FastAPI(
-    title="DAO Akıllı Sağlık Ajanı API Katmanı - V2",
-    description="Mobil uygulama için Hibrit LLM destekli ışık hızında sağlık servisi",
-    version="2.0.0"
-)
 
 class StepDataInput(BaseModel):
     gun_adi: str
