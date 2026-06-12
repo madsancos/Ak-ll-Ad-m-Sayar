@@ -41,13 +41,13 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     return {
-        "guncelAdim": 11450,
-        "hedef": 12000,
+        "guncelAdim": 14450,
+        "hedef": 10000,
         "kalori": 420,
-        "mesafe": 7.2,
-        "aktifDakika": 55,
+        "mesafe": 9.1,
+        "aktifDakika": 75,
         "daoSaglikSkoru": 98,
-        "koceMesaji": "Serdar Bey, harika bir gün! Adım hedefinize yaklaşırken Xiaomi tartı verileriniz kas kütlenizin korunduğunu gösteriyor. Yürüyüşe devam!"
+        "koceMesaji": "Serdar Bey, muazzam bir eşik! Günlük 10.000 adım hedefinizi %45 oranında aştınız. İkinci tur halkası DAO Sağlık Skorunuza ekstra puan ekliyor!"
     }
 
 
