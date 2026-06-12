@@ -7,6 +7,42 @@ import os
 import requests 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+from fastapi import FastAPI
+# 1. CORS kütüphanesini içeri aktarıyoruz
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# 2. Güvenlik duvarından geçebilecek adresleri (Localhost ve Render) tanımlıyoruz
+origins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://smart-pedometer.onrender.com",
+]
+
+# 3. FastAPI bekçisine bu kökenlerden gelen tüm isteklere (GET, POST vb.) izin ver diyoruz
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Geliştirme aşamasında tıkanmamak için geçici olarak her yere açıyoruz
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Sizin dün geceki mevcut endpoint'iniz aşağıda kalmaya devam edecek:
+@app.get("/")
+def read_root():
+    return {
+        "guncelAdim": 11450,
+        "hedef": 12000,
+        "kalori": 420,
+        "mesafe": 7.2,
+        "aktifDakika": 55,
+        "daoSaglikSkoru": 98,
+        "koceMesaji": "Serdar Bey, harika bir gün! Adım hedefinize yaklaşırken Xiaomi tartı verileriniz kas kütlenizin korunduğunu gösteriyor. Yürüyüşe devam!"
+    }
+
+
 app = FastAPI(
     title="DAO Akıllı Sağlık Ajanı API Katmanı - V2",
     description="Mobil uygulama için Hibrit LLM destekli ışık hızında sağlık servisi",
