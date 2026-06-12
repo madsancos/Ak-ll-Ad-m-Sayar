@@ -334,7 +334,7 @@ Bu proje; kıdemli yazılım mühendisliği prensipleri, modern backend mimarile
 
 ## Hazırlayan
 **Serdar ÖNAL** | 
-**İnşaat Mühendisi & Yapay Zeka Geliştiricisi | 2026**
+**Kıdemli İnşaat Mühendisi & Yapay Zeka Geliştiricisi | 2026**
 > "Mühendislik disipliniyle veriyi işliyor, sahadaki arızaları dijital dünyada öngörüyorum."
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/serdarönal1981)
