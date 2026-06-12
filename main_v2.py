@@ -66,7 +66,7 @@ class ActivityAnalyzer:
 
 class HibritSaglikKocu:
     def __init__(self):
-        self.api_key = os.getenv("Enter API key")
+        self.api_key = os.getenv("Enter_API_key")
         self.gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={self.api_key}"
         self.model_dir = "/kaggle/input/models/google/gemma-2/transformers/gemma-2-2b-it/2"
         self.tokenizer = None
